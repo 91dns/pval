@@ -1,4 +1,3 @@
-```markdown
 ## Usage
 
 Here's an example of how to use `pval`:
@@ -55,4 +54,3 @@ fn main() -> Result<(), std::io::Error> {
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
