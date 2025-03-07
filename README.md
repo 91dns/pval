@@ -1,7 +1,7 @@
 ```markdown
-# pval
+## pval
 
-`pval` is a Rust library for password validation with customizable criteria.
+`pval` is a Rust library for validating passwords with customizable rules.
 
 ## Installation
 
@@ -10,6 +10,12 @@ Add `pval` to your `Cargo.toml`:
 ```toml
 [dependencies]
 pval = "0.1.0"
+```
+
+Or you can add it via the command line:
+
+```sh
+cargo add pval
 ```
 
 ## Usage
