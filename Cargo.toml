@@ -1,0 +1,15 @@
+[package]
+name = "pval"
+version = "0.1.0"
+edition = "2024"
+authors = ["dns <91dns@proton.me>"]
+description = "A Rust library for password validation with customizable criteria."
+license = "MIT"
+repository = "https://github.com/91dns/pval"
+homepage = "https://github.com/91dns/pval"
+documentation = "https://docs.rs/pval"
+readme = "README.md"
+keywords = ["password", "validation", "security"]
+categories = ["security", "authentication"]
+
+[dependencies]
