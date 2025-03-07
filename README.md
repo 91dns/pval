@@ -1,3 +1,7 @@
+## pval
+
+`pval` is a Rust library for validating passwords with customizable rules.
+
 ## Installation
 
 Add `pval` to your `Cargo.toml`:
@@ -23,6 +27,7 @@ use pval::Pval;
 fn main() -> Result<(), String> {
     let validator = Pval::new()
         .min_length(8)
+        .max_length(16)
         .require_uppercase(true)
         .require_lowercase(true)
         .require_digit(true)
@@ -47,6 +52,7 @@ use pval::utils::load_passwords;
 fn main() -> Result<(), std::io::Error> {
     let validator = Pval::new()
         .min_length(8)
+        .max_length(16)
         .require_uppercase(true)
         .require_lowercase(true)
         .require_digit(true)
