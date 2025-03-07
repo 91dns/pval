@@ -43,7 +43,48 @@ fn main() -> Result<(), String> {
 }
 ```
 
-You can also load passwords from a file and validate them:
+## Utility Functions
+
+In addition to the main password validator, `pval` provides utility functions for common tasks related to password management.
+
+### Check Password Strength
+
+You can check the strength of a password using the `check_strength` function:
+
+```rust
+use pval::utils::check_strength;
+
+fn main() {
+    let password = "P@ssw0rd";
+
+    let strength = check_strength(password);
+    println!("Password strength: {}", strength);
+}
+```
+
+The `check_strength` function evaluates the strength of a password based on its length and the presence of uppercase letters, lowercase letters, digits, and special characters. It returns a string indicating the strength of the password ("weak", "medium", "strong", "very strong").
+
+### Load Passwords from a File
+
+You can load passwords from a file using the `load_passwords` function:
+
+```rust
+use pval::utils::load_passwords;
+
+fn main() -> Result<(), std::io::Error> {
+    let passwords = load_passwords("passwords.txt")?;
+
+    for password in passwords {
+        println!("Loaded password: {}", password);
+    }
+
+    Ok(())
+}
+```
+
+The `load_passwords` function reads passwords from a specified file and returns them as a vector of strings.
+
+You can also validate and check the loaded passwords:
 
 ```rust
 use pval::Pval;
@@ -66,6 +107,9 @@ fn main() -> Result<(), std::io::Error> {
             Ok(_) => println!("Password '{}' is valid.", password),
             Err(e) => println!("Password '{}' is invalid: {}", password, e),
         }
+
+        let strength = check_strength(&password);
+        println!("Password '{}' strength: {}", password, strength);
     }
 
     Ok(())
