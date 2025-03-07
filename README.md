@@ -1,4 +1,18 @@
-```markdown
+## Installation
+
+Add `pval` to your `Cargo.toml`:
+
+```toml
+[dependencies]
+pval = "0.1.0"
+```
+
+Or you can add it via the command line:
+
+```sh
+cargo add pval
+```
+
 ## Usage
 
 Here's an example of how to use `pval`:
@@ -55,4 +69,3 @@ fn main() -> Result<(), std::io::Error> {
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
