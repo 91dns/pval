@@ -129,19 +129,16 @@ impl Pval {
         }
 
         if self.require_uppercase && !has_uppercase {
-            return Err("Password must contain at least one uppercase letter (A-Z).".to_string());
+            return Err("Password must contain at least one uppercase letter.".to_string());
         }
         if self.require_lowercase && !has_lowercase {
-            return Err("Password must contain at least one lowercase letter (a-z).".to_string());
+            return Err("Password must contain at least one lowercase letter.".to_string());
         }
         if self.require_digit && !has_digit {
-            return Err("Password must contain at least one digit (0-9).".to_string());
+            return Err("Password must contain at least one digit.".to_string());
         }
         if self.require_special && !has_special {
-            return Err(
-                "Password must contain at least one special character (e.g., !@#$%^&*)."
-                    .to_string(),
-            );
+            return Err("Password must contain at least one special character.".to_string());
         }
 
         Ok(())
