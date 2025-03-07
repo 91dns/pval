@@ -10,6 +10,6 @@ homepage = "https://github.com/91dns/pval"
 documentation = "https://docs.rs/pval"
 readme = "README.md"
 keywords = ["password", "validation", "security"]
-categories = ["security", "authentication"]
+categories = ["Authentication"]
 
 [dependencies]
